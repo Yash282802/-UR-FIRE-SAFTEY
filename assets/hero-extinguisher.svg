@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Background Plate with Industrial Grid -->
+  <rect width="500" height="500" rx="8" fill="#1e2020" stroke="#b1000f" stroke-width="3"/>
+  <path d="M 0,50 L 500,50 M 0,100 L 500,100 M 0,150 L 500,150 M 0,200 L 500,200 M 0,250 L 500,250 M 0,300 L 500,300 M 0,350 L 500,350 M 0,400 L 500,400 M 0,450 L 500,450" stroke="#2a2c2c" stroke-width="1.5"/>
+  <path d="M 50,0 L 50,500 M 100,0 L 100,500 M 150,0 L 150,500 M 200,0 L 200,500 M 250,0 L 250,500 M 300,0 L 300,500 M 350,0 L 350,500 M 400,0 L 400,500 M 450,0 L 450,500" stroke="#2a2c2c" stroke-width="1.5"/>
+
+  <!-- Subtle Ambient Glow in Center -->
+  <circle cx="250" cy="270" r="180" fill="url(#bgGlow)" opacity="0.15"/>
+
+  <!-- Fire Extinguisher Body Shadow -->
+  <ellipse cx="250" cy="450" rx="70" ry="12" fill="#0c0d0d" opacity="0.6"/>
+
+  <!-- Cylinder Base Body -->
+  <path d="M 180,200 L 320,200 L 320,410 C 320,430 300,440 250,440 C 200,440 180,430 180,410 Z" fill="url(#cylinderGrad)" stroke="#0c0d0d" stroke-width="3"/>
+  
+  <!-- Cylinder Top Dome -->
+  <path d="M 180,200 C 180,165 210,150 250,150 C 290,150 320,165 320,200 Z" fill="url(#domeGrad)" stroke="#0c0d0d" stroke-width="3"/>
+
+  <!-- Highlights & Gloss effect on cylinder -->
+  <path d="M 195,200 L 195,415" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.15"/>
+  <path d="M 305,200 L 305,415" stroke="#000000" stroke-width="16" stroke-linecap="round" opacity="0.25"/>
+
+  <!-- High-Contrast Product Label -->
+  <rect x="195" y="240" width="110" height="120" rx="4" fill="#0f1111" stroke="#F5A623" stroke-width="2"/>
+  <!-- Label Content -->
+  <text x="250" y="265" font-family="Oswald, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">UR FIRE</text>
+  <text x="250" y="280" font-family="Oswald, sans-serif" font-size="9" font-weight="600" fill="#F5A623" text-anchor="middle" letter-spacing="2">EXTINGUISHER</text>
+  
+  <!-- Direct Instruction Icons on Label -->
+  <rect x="210" y="295" width="24" height="24" rx="2" fill="#b1000f"/>
+  <text x="222" y="312" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
+
+  <rect x="238" y="295" width="24" height="24" rx="2" fill="#794e00"/>
+  <text x="250" y="312" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">B</text>
+
+  <rect x="266" y="295" width="24" height="24" rx="2" fill="#006494"/>
+  <text x="278" y="312" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">C</text>
+  
+  <text x="250" y="345" font-family="sans-serif" font-size="8" fill="#e2dfde" text-anchor="middle">SUITABLE FOR MOST FIRES</text>
+
+  <!-- Neck Collar & Ring -->
+  <rect x="232" y="138" width="36" height="12" fill="#5f5e5e" stroke="#0c0d0d" stroke-width="2"/>
+  <line x1="232" y1="144" x2="268" y2="144" stroke="#3a3a3a" stroke-width="2"/>
+
+  <!-- Valve / Handle / Lever Assembly -->
+  <!-- Bottom Fixed Handle -->
+  <path d="M 250,138 C 250,138 290,135 315,148 C 322,152 320,158 312,158 C 295,158 266,144 250,144 Z" fill="url(#metalGrad)" stroke="#0c0d0d" stroke-width="2"/>
+  <!-- Top Squeeze Lever -->
+  <path d="M 248,138 C 248,138 280,105 315,115 C 322,117 322,125 315,127 C 292,129 265,138 248,138 Z" fill="url(#metalGrad)" stroke="#0c0d0d" stroke-width="2"/>
+
+  <!-- Safety Pin & Pull Ring -->
+  <circle cx="230" cy="120" r="14" fill="none" stroke="#e5e2e1" stroke-width="4"/>
+  <path d="M 226,120 L 254,130" stroke="#e5e2e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Pressure Gauge -->
+  <circle cx="270" cy="115" r="15" fill="#f9f9f9" stroke="#0c0d0d" stroke-width="2"/>
+  <!-- Gauge Dial Color Zones -->
+  <path d="M 258,110 A 12,12 0 0,1 267,103 L 270,115 Z" fill="#b1000f"/> <!-- Red (Low) -->
+  <path d="M 267,103 A 12,12 0 0,1 276,105 L 270,115 Z" fill="#25d366"/> <!-- Green (OK) -->
+  <path d="M 276,105 A 12,12 0 0,1 282,115 L 270,115 Z" fill="#b1000f"/> <!-- Red (Overcharge) -->
+  <!-- Needle -->
+  <line x1="270" y1="115" x2="271" y2="105" stroke="#1c1b1b" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="270" cy="115" r="2.5" fill="#000000"/>
+
+  <!-- Discharge Hose & Nozzle -->
+  <!-- Hose Connector -->
+  <rect x="218" y="132" width="14" height="12" rx="1" fill="#F5A623" stroke="#0c0d0d" stroke-width="1.5"/>
+  <!-- Curved Hose -->
+  <path d="M 225,138 C 170,150 145,280 178,350" fill="none" stroke="#121313" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 225,138 C 170,150 145,280 178,350" fill="none" stroke="#2f3131" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Horn / Nozzle -->
+  <path d="M 178,348 L 165,395 C 160,410 185,420 190,405 L 186,352 Z" fill="#121313" stroke="#0c0d0d" stroke-width="2"/>
+  
+  <!-- Safety Compliance Stamp Overlay -->
+  <circle cx="350" cy="380" r="32" fill="none" stroke="#F5A623" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+  <text x="350" y="378" font-family="Oswald, sans-serif" font-size="8" font-weight="700" fill="#F5A623" text-anchor="middle" opacity="0.7">ISO 9001</text>
+  <text x="350" y="388" font-family="Oswald, sans-serif" font-size="7" font-weight="600" fill="#F5A623" text-anchor="middle" opacity="0.7">CERTIFIED</text>
+
+  <!-- Gradients -->
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b1000f" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#b1000f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cylinderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#910007"/>
+      <stop offset="25%" stop-color="#d72323"/>
+      <stop offset="60%" stop-color="#b1000f"/>
+      <stop offset="85%" stop-color="#700004"/>
+      <stop offset="100%" stop-color="#410002"/>
+    </linearGradient>
+    <linearGradient id="domeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4a4a"/>
+      <stop offset="30%" stop-color="#d72323"/>
+      <stop offset="70%" stop-color="#800004"/>
+      <stop offset="100%" stop-color="#300001"/>
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#c8c6c5"/>
+      <stop offset="70%" stop-color="#5f5e5e"/>
+      <stop offset="100%" stop-color="#1c1b1b"/>
+    </linearGradient>
+  </defs>
+</svg>

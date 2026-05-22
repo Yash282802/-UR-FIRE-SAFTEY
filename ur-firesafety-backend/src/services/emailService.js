@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
+const prisma = require("./prisma");
 
 function createTransporter() {
   if (process.env.NODE_ENV === "test" || !process.env.SMTP_USER) {

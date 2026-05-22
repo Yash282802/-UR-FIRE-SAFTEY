@@ -1,11 +1,9 @@
-require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const contactRoutes = require("./routes/contact");
 const adminRoutes = require("./routes/admin");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: process.env.CORS_ORIGIN || "http://localhost:5500",
@@ -28,10 +26,6 @@ app.use((_req, res) => {
 app.use((err, _req, res, _next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ success: false, message: "Internal server error" });
-});
-
-app.listen(PORT, () => {
-  console.log(`UR Fire Safety API running on port ${PORT}`);
 });
 
 module.exports = app;

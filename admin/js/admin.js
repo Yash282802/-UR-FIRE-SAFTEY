@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3000/api/v1';
+const API_BASE = 'https://ur-firesafety-backend.vercel.app/api/v1';
 const TOKEN_KEY = 'ur_admin_token';
 const USER_KEY = 'ur_admin_user';
 

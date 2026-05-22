@@ -165,7 +165,7 @@ function initContactForm() {
       submitBtn.disabled = true;
       submitBtn.innerText = 'SENDING...';
 
-      const API_BASE = 'https://api.urfiresafety.com/v1';
+      const API_BASE = 'https://ur-firesafety-backend.vercel.app/api/v1';
 
       fetch(`${API_BASE}/contact`, {
         method: 'POST',

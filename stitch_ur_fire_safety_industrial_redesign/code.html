@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UR Fire Safety Solution | Life-Safety Systems &amp; Compliance</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: IBM Plex Sans & JetBrains Mono -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "surface-dim": "#dadada",
+                    "on-primary-fixed-variant": "#92030f",
+                    "primary": "#8f000d",
+                    "primary-container": "#b22222",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e2e2e2",
+                    "surface-tint": "#b52424",
+                    "outline": "#8e706d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#474747",
+                    "tertiary": "#444545",
+                    "background": "#f9f9f9",
+                    "on-surface-variant": "#5a403e",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface": "#f9f9f9",
+                    "outline-variant": "#e2beba",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#ffb4ac",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary-container": "#656464",
+                    "on-surface": "#1a1c1c",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary-fixed": "#410003",
+                    "secondary-container": "#e4e2e1",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#5c5c5c",
+                    "secondary": "#5f5e5e",
+                    "tertiary-fixed": "#e4e2e2",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-fixed": "#e4e2e1",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-tertiary-container": "#d6d4d4",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-primary-container": "#ffc8c2",
+                    "primary-fixed": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container": "#eeeeee"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "container-max": "1280px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["IBM Plex Sans Condensed"],
+                    "headline-lg": ["IBM Plex Sans Condensed"],
+                    "display-lg": ["IBM Plex Sans Condensed"],
+                    "body-md": ["IBM Plex Sans"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-lg": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .flat-architecture {
+            background-color: #eeeeee;
+            border: 1px solid #CCCCCC;
+        }
+        .technical-spec-card {
+            border-left: 4px solid #8f000d;
+        }
+        .emergency-glow {
+            animation: pulse-border 2s infinite;
+        }
+        @keyframes pulse-border {
+            0% { border-color: #8f000d; }
+            50% { border-color: #ffb4ac; }
+            100% { border-color: #8f000d; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface border-b border-outline w-full">
+<div class="flex flex-col w-full max-w-container-max mx-auto px-margin-desktop">
+<div class="flex items-center justify-between py-4">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">
+                    UR FIRE SAFETY SOLUTION
+                </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary py-1 font-label-sm text-label-sm" href="#">Home</a>
+<a class="text-secondary font-medium hover:bg-surface-container transition-colors duration-200 py-1 font-label-sm text-label-sm" href="#">Services</a>
+<a class="text-secondary font-medium hover:bg-surface-container transition-colors duration-200 py-1 font-label-sm text-label-sm" href="#">Products</a>
+<a class="text-secondary font-medium hover:bg-surface-container transition-colors duration-200 py-1 font-label-sm text-label-sm" href="#">About</a>
+<a class="text-secondary font-medium hover:bg-surface-container transition-colors duration-200 py-1 font-label-sm text-label-sm" href="#">Contact</a>
+</nav>
+<div class="hidden md:block">
+<span class="bg-primary text-on-primary px-4 py-2 font-label-sm text-label-sm font-bold">
+                        EMERGENCY: +91-XXXX-XXXXXX
+                    </span>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Technical Hero Section -->
+<section class="relative w-full h-[716px] min-h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-resolution photograph of a professional industrial fire hydrant installation with polished red piping and brass valves in a clean, modern manufacturing facility. The lighting is crisp and technical, highlighting the textures of the metal and the industrial setting. The color palette features deep mechanical greys and bold safety reds, conveying engineering precision and life-safety reliability. Professional industrial photography style with sharp focus." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZ8lApH0nvar2zq8woMGogaaQxo7g-qg4LhQVyHXYJFJ3ZJ2-Av1gmePaZ3BQsOuKwgEmpw17PF-kYRm1IQsa4Nnfqv7q9SfzwJm4rz0aQdY6dDAJii0B2YhQBtJRLF4fx8TDRik5-5VdpYULlE9WkeaE9YA4GRtEc5qqZu893tF4CSF_McZetZ2sHRK7UFAWpjKKFO8VlHNBefJZzp6YgP1Or2KnANn_5EGdQiDEt1jDnfBPuW7Z3QQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-2xl">
+<div class="inline-block bg-primary text-on-primary px-3 py-1 mb-6 font-label-sm text-label-sm uppercase tracking-widest">
+                        Industrial Grade Protection
+                    </div>
+<h1 class="font-display-lg text-display-lg text-white mb-6">
+                        Life-Safety Systems &amp; Compliance.
+                        <span class="text-primary-fixed-dim block">Vadodara's Trusted Partner.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8 max-w-xl">
+                        Ensuring zero-compromise fire safety for industrial complexes, commercial high-rises, and hazardous environments through certified engineering and 24/7 support.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-label-sm text-label-sm font-bold uppercase hover:bg-primary-container transition-all">
+                            Technical Consultation
+                        </button>
+<button class="border border-white text-white px-8 py-4 font-label-sm text-label-sm font-bold uppercase hover:bg-white/10 transition-all">
+                            View Compliance Services
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Row & Stats -->
+<section class="bg-surface-container border-b border-outline">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2">
+<!-- Trust Badges -->
+<div class="py-8 flex flex-wrap items-center gap-8 border-b md:border-b-0 md:border-r border-outline-variant">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm font-bold text-primary">ISO 9001:2015</div>
+<div class="font-body-md text-on-surface-variant">Quality Management Certified</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">shield</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm font-bold text-primary">LICENSE NO</div>
+<div class="font-body-md text-on-surface-variant">FIRE/VAD/102</div>
+</div>
+</div>
+</div>
+<!-- Technical Stats -->
+<div class="py-8 grid grid-cols-3 text-center">
+<div class="flex flex-col justify-center border-r border-outline-variant">
+<div class="font-headline-md text-headline-md text-primary">12+</div>
+<div class="font-label-sm text-label-sm text-secondary uppercase">Years Active</div>
+</div>
+<div class="flex flex-col justify-center border-r border-outline-variant">
+<div class="font-headline-md text-headline-md text-primary">5,000+</div>
+<div class="font-label-sm text-label-sm text-secondary uppercase">Installations</div>
+</div>
+<div class="flex flex-col justify-center">
+<div class="font-headline-md text-headline-md text-primary">24/7</div>
+<div class="font-label-sm text-label-sm text-secondary uppercase">Rapid Response</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Overview (Asymmetric Grid) -->
+<section class="py-24 bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<div class="font-label-sm text-label-sm text-primary font-bold uppercase mb-2">Capabilities</div>
+<h2 class="font-headline-lg text-headline-lg">Technical Fire Safety Services</h2>
+</div>
+<div class="hidden md:block font-label-sm text-label-sm text-secondary">
+                        SN: UR-SYS-2024-VAD
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Installation (Large) -->
+<div class="md:col-span-7 group">
+<div class="technical-spec-card flat-architecture h-[400px] flex flex-col relative overflow-hidden">
+<div class="p-8 relative z-10 bg-surface/90 h-full w-2/3 border-r border-outline-variant">
+<span class="font-label-sm text-label-sm text-secondary mb-4 block">ID: SRV-01-INST</span>
+<h3 class="font-headline-md text-headline-md mb-4">Turnkey Hydrant &amp; Sprinkler Systems</h3>
+<p class="text-on-surface-variant mb-6">Complete architectural design, hydraulic calculation, and execution of fire fighting systems as per NBC &amp; TAC guidelines.</p>
+<ul class="space-y-2 mb-8">
+<li class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Automatic Sprinkler Networks
+                                    </li>
+<li class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Wet Riser Systems
+                                    </li>
+<li class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Fire Pump Room Setup
+                                    </li>
+</ul>
+<button class="font-label-sm text-label-sm font-bold text-primary flex items-center gap-2 hover:translate-x-2 transition-transform">
+                                    ENGINEERING SPECS <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<div class="absolute right-0 top-0 w-1/3 h-full grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A professional vertical photograph of a high-pressure industrial fire hydrant pump system with chrome fittings and heavy-duty gauges. The lighting is cool-toned and professional, highlighting the mechanical complexity and heavy-duty nature of the equipment. Modern industrial aesthetic with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUN3pFHf0zOwvCPv5WyK9X7BwjmTosJM4AZHyT5fzLpohQP8dIgaHpiTISRmvEGgXZvcJ2C5o9ZBwhcgZ5pW8q0luWStCEqFJYx3WODT3b6W5BgWXGidNoDJN7jFDqJGJRHXMUsOgRGTIxz2hr-5jvRNeIsD16ce3FbUhAjFnhK2EwuIVrnbJvyN125yvIWmDN99UosIpnQCxHDfbtRWMsbqZonNKG9IRRwdcWNHCI9k3o4YjUPx0J8w"/>
+</div>
+</div>
+</div>
+<!-- AMC (Medium) -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<div class="technical-spec-card flat-architecture p-8 flex-1 group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">Annual Maintenance (AMC)</h3>
+<span class="material-symbols-outlined text-secondary text-3xl">fact_check</span>
+</div>
+<p class="text-on-surface-variant mb-4">Preventive maintenance and quarterly health checks for all fire safety equipment to ensure 100% operational readiness.</p>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">COMPLIANCE DRIVEN</span>
+<button class="text-primary hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+</div>
+<div class="technical-spec-card flat-architecture p-8 flex-1 group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">Refilling &amp; Hydrotesting</h3>
+<span class="material-symbols-outlined text-secondary text-3xl">gas_meter</span>
+</div>
+<p class="text-on-surface-variant mb-4">PESO approved refilling facility for ABC, CO2, and Foam extinguishers with pressure testing certification.</p>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">CERTIFIED LAB</span>
+<button class="text-primary hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Equipment Section -->
+<section class="py-24 bg-inverse-surface text-inverse-on-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg mb-8">Detection &amp; Suppression Tech</h2>
+<div class="space-y-6">
+<div class="flex gap-6 items-start">
+<div class="bg-primary p-3">
+<span class="material-symbols-outlined text-white">sensors</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Addressable Detection</h4>
+<p class="text-on-tertiary-container opacity-80">Precision smoke and heat sensors that pinpoint the exact location of threats in large scale facilities.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-primary p-3">
+<span class="material-symbols-outlined text-white">water_drop</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Foam &amp; CO2 Flooding</h4>
+<p class="text-on-tertiary-container opacity-80">Specialized suppression systems for server rooms, chemical storage, and electrical panels.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-primary p-3">
+<span class="material-symbols-outlined text-white">rule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Safety Audit &amp; Training</h4>
+<p class="text-on-tertiary-container opacity-80">Comprehensive facility risk assessment and personnel fire-drill training sessions.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container-highest/10 border border-outline-variant p-4">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of an industrial smoke detector and a fire alarm strobe light installed on a concrete ceiling of a modern data center. The lighting is dramatic, with the strobe's red element glowing slightly. High technical detail, sharp industrial textures, and a professional, safety-focused aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH_ZHPsg6yobJfbos4eLuP-4k5hjrPqsswARnFv1sGRBPBKkYB9raHiPS-sbM6Ysdp80RIq4kxSf0xn9Q3DyBi5XMSEkC3klwFMIpFMs0GPSIdPPofhwghfH2lnG5K6NGVg3UbjXqhV4eogUhFvqzFAPhFxpc2_4LWE1RGCyZXuT3KntLWVZOfVCsBzL0Qu0z5RqzIZljFgNRXJ853-jQ4tjaUVY0qxsglykTl1zcFQOh9tsFW4hxrTQ"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-primary text-on-primary p-8 hidden md:block">
+<div class="font-label-sm text-label-sm uppercase mb-2">Safety standard</div>
+<div class="font-headline-md text-headline-md">UL/FM APPROVED</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA & Emergency Bar -->
+<section class="py-20 bg-background border-t border-outline">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-4">Need a Safety Audit?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Our engineers are available for on-site inspection and risk assessments.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-on-surface text-white px-12 py-4 font-label-sm text-label-sm font-bold uppercase hover:bg-primary transition-all">
+                        Request Quote
+                    
+</button><button class="border-2 border-primary text-primary px-12 py-4 font-label-sm text-label-sm font-bold uppercase hover:bg-primary hover:text-white transition-all">
+                        Contact Support
+                    
+</button></div>
+</div>
+</section>
+</main>
+<!-- Sticky Emergency Bar -->
+<div class="fixed bottom-0 left-0 w-full z-[100] bg-primary text-on-primary py-3 emergency-glow border-t-2 border-primary-fixed">
+<div class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined animate-pulse">emergency_share</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Emergency Response Unit</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="font-headline-md text-headline-md hover:underline" href="tel:+910000000000">+91 999 888 7777</a>
+<span class="hidden md:inline font-label-sm text-label-sm opacity-80">| VADODARA REGION</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary w-full border-t-4 border-primary pb-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-lg text-headline-lg text-on-tertiary uppercase mb-6 leading-none">
+                    UR FIRE<br/>SAFETY
+                </div>
+<p class="font-body-md text-body-md opacity-80 mb-6">
+                    Professional grade fire suppression and detection solutions for industrial and commercial sectors.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer">face_nod</span>
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer">share</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Compliance</h4>
+<ul class="space-y-3 font-body-md text-body-md opacity-80">
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">GST: 24AAAAA0000A1Z5</li>
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">ISO 9001:2015</li>
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">License No: FIRE/VAD/102</li>
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">PESO Certification</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Solutions</h4>
+<ul class="space-y-3 font-body-md text-body-md opacity-80">
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">Industrial Hydrants</li>
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">AMC Services</li>
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">Refilling Depot</li>
+<li class="hover:text-primary-fixed-dim transition-colors cursor-pointer">Detection Systems</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Contact</h4>
+<p class="font-body-md text-body-md opacity-80 mb-4">
+                    Plot No 42, GIDC Makarpura,<br/>
+                    Vadodara, Gujarat - 390010
+                </p>
+<p class="font-body-md text-body-md opacity-80">
+                    E: info@urfire.com<br/>
+                    P: +91-265-XXXXXXX
+                </p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-label-sm text-label-sm opacity-60">
+                © 2024 UR Fire Safety Solution. Regd. Vadodara. All Rights Reserved.
+            </div>
+<div class="flex gap-6 font-label-sm text-label-sm">
+<a class="text-on-tertiary-container opacity-80 hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-tertiary-container opacity-80 hover:text-primary-fixed-dim transition-colors" href="#">Compliance</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('.technical-spec-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

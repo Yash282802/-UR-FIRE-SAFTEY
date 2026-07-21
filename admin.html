@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Owner CRM Portal | UR Fire Safety Solution</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  
+  <!-- Material Symbols & Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8f000d",
+            "primary-container": "#b22222",
+            "on-primary": "#ffffff",
+            "surface-container": "#eeeeee",
+            "surface-container-high": "#e8e8e8",
+            "on-surface": "#1a1c1c",
+            "secondary": "#5f5e5e",
+            "tertiary": "#444545",
+            "background": "#f9f9f9"
+          },
+          fontFamily: {
+            "headline-md": ["IBM Plex Sans Condensed"],
+            "body-md": ["IBM Plex Sans"],
+            "label-sm": ["JetBrains Mono"]
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+
+  <!-- ==========================================================================
+       LOGIN VIEW (Owner Authenticated Access)
+       ========================================================================== -->
+  <div id="crm-login-view" class="fixed inset-0 z-50 bg-[#1a1c1c] text-white flex items-center justify-center p-6">
+    <div class="max-w-md w-full bg-[#2f3131] border-2 border-primary p-8">
+      <div class="bg-primary text-white text-[11px] font-mono px-2 py-1 inline-block font-bold mb-4">OWNER ACCESS ONLY</div>
+      <h1 class="font-headline-md text-headline-lg mb-2">UR Fire Safety CRM Portal</h1>
+      <p class="text-surface-dim text-sm mb-6">Enter owner credentials to access lead pipeline, clients, and AMC contracts.</p>
+      
+      <form id="crm-login-form" class="space-y-4">
+        <div>
+          <label class="block font-mono text-xs font-bold text-surface-dim uppercase mb-1">Email Address</label>
+          <input type="email" id="admin-email" value="ritesh@urfiresafety.com" required class="w-full p-3 bg-surface-container text-on-surface font-mono border border-outline focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block font-mono text-xs font-bold text-surface-dim uppercase mb-1">Password</label>
+          <input type="password" id="admin-password" value="admin123" required class="w-full p-3 bg-surface-container text-on-surface font-mono border border-outline focus:outline-none focus:border-primary"/>
+        </div>
+        <button type="submit" class="w-full bg-primary text-white py-4 font-mono font-bold uppercase tracking-wider hover:bg-primary-container transition-all">
+          LOG IN TO CRM
+        </button>
+      </form>
+      <div class="mt-6 pt-4 border-t border-outline text-xs text-secondary text-center font-mono">
+        Default Owner Login: ritesh@urfiresafety.com / admin123
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DASHBOARD VIEW (Authenticated Owner Workspace)
+       ========================================================================== -->
+  <div id="crm-dashboard-view" style="display: none;">
+    
+    <!-- Top Header -->
+    <header class="bg-[#1a1c1c] text-white border-b-2 border-primary py-4 px-6 sticky top-0 z-40">
+      <div class="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-3xl">shield</span>
+          <div>
+            <div class="font-headline-md text-headline-md font-bold tracking-tight">UR FIRE SAFETY — OWNER CRM</div>
+            <div class="font-mono text-xs text-primary-fixed-dim">Logged in: Ritesh Tiwari (Owner)</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="index.html" target="_blank" class="text-xs font-mono bg-tertiary px-3 py-2 text-white hover:bg-secondary">View Public Site ↗</a>
+          <button id="crm-logout-btn" class="text-xs font-mono bg-primary px-3 py-2 text-white font-bold hover:bg-primary-container">LOGOUT</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="bg-surface-container border-b border-outline px-6 py-2">
+      <div class="max-w-[1400px] mx-auto flex flex-wrap gap-2 font-mono text-xs font-bold">
+        <button class="crm-nav-tab active bg-primary text-white px-4 py-2" data-section="crm-section-dashboard">DASHBOARD</button>
+        <button class="crm-nav-tab bg-surface text-secondary border border-outline px-4 py-2 hover:text-primary" data-section="crm-section-leads">LEADS PIPELINE</button>
+        <button class="crm-nav-tab bg-surface text-secondary border border-outline px-4 py-2 hover:text-primary" data-section="crm-section-clients">CLIENTS DIRECTORY</button>
+        <button class="crm-nav-tab bg-surface text-secondary border border-outline px-4 py-2 hover:text-primary" data-section="crm-section-amc">AMC CONTRACTS</button>
+        <button class="crm-nav-tab bg-surface text-secondary border border-outline px-4 py-2 hover:text-primary" data-section="crm-section-testimonials">TESTIMONIALS</button>
+        <button class="crm-nav-tab bg-surface text-secondary border border-outline px-4 py-2 hover:text-primary" data-section="crm-section-settings">SITE STATS</button>
+      </div>
+    </nav>
+
+    <!-- Main CRM Content Area -->
+    <main class="max-w-[1400px] mx-auto p-6">
+      
+      <!-- Section 1: Dashboard Summary -->
+      <section id="crm-section-dashboard" class="crm-section">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div class="technical-spec-card flat-architecture p-6 bg-white">
+            <div class="font-mono text-xs text-secondary font-bold uppercase mb-1">NEW INBOUND LEADS</div>
+            <div id="crm-stat-new-leads" class="font-headline-md text-3xl font-bold text-primary">0</div>
+            <div class="text-xs text-secondary mt-2">Form &amp; quote submissions</div>
+          </div>
+          <div class="technical-spec-card flat-architecture p-6 bg-white">
+            <div class="font-mono text-xs text-secondary font-bold uppercase mb-1">ACTIVE CLIENTS</div>
+            <div id="crm-stat-active-clients" class="font-headline-md text-3xl font-bold text-on-surface">0</div>
+            <div class="text-xs text-secondary mt-2">Converted accounts</div>
+          </div>
+          <div class="technical-spec-card flat-architecture p-6 bg-white">
+            <div class="font-mono text-xs text-secondary font-bold uppercase mb-1">EXPIRING AMCS (30 DAYS)</div>
+            <div id="crm-stat-expiring-amc" class="font-headline-md text-3xl font-bold text-primary">0</div>
+            <div class="text-xs text-secondary mt-2">Requires renewal follow-up</div>
+          </div>
+          <div class="technical-spec-card flat-architecture p-6 bg-white">
+            <div class="font-mono text-xs text-secondary font-bold uppercase mb-1">TOTAL INSTALLATIONS</div>
+            <div class="font-headline-md text-3xl font-bold text-on-surface">5,000+</div>
+            <div class="text-xs text-secondary mt-2">Vadodara region</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Leads Pipeline -->
+      <section id="crm-section-leads" class="crm-section" style="display: none;">
+        <div class="technical-spec-card flat-architecture p-6 bg-white mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="font-headline-md text-headline-md font-bold">Inbound Leads &amp; Quote Requests</h2>
+            <span class="font-mono text-xs text-secondary">REAL-TIME LEADS PIPELINE</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="technical-table">
+              <thead>
+                <tr>
+                  <th>NAME / COMPANY</th>
+                  <th>PHONE / EMAIL</th>
+                  <th>SERVICE INTERESTED</th>
+                  <th>SOURCE</th>
+                  <th>STATUS PIPELINE</th>
+                  <th>MESSAGE / SCOPE</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody id="crm-leads-table-body">
+                <!-- Dynamically Populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Clients Directory -->
+      <section id="crm-section-clients" class="crm-section" style="display: none;">
+        <div class="technical-spec-card flat-architecture p-6 bg-white mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="font-headline-md text-headline-md font-bold">Clients Directory</h2>
+            <span class="font-mono text-xs text-secondary">CONVERTED CLIENT RECORDS</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="technical-table">
+              <thead>
+                <tr>
+                  <th>CLIENT NAME</th>
+                  <th>COMPANY</th>
+                  <th>TYPE</th>
+                  <th>PHONE</th>
+                  <th>FACILITY ADDRESS</th>
+                </tr>
+              </thead>
+              <tbody id="crm-clients-table-body">
+                <!-- Dynamically Populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: AMC Contracts -->
+      <section id="crm-section-amc" class="crm-section" style="display: none;">
+        <div class="technical-spec-card flat-architecture p-6 bg-white mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="font-headline-md text-headline-md font-bold">Annual Maintenance Contracts (AMC)</h2>
+            <span class="font-mono text-xs text-secondary">RECURRING SERVICE TRACKER</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="technical-table">
+              <thead>
+                <tr>
+                  <th>CONTRACT NO</th>
+                  <th>CLIENT NAME</th>
+                  <th>EQUIPMENT COVERED</th>
+                  <th>DURATION</th>
+                  <th>AMOUNT</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+              <tbody id="crm-amc-table-body">
+                <!-- Dynamically Populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Testimonials Manager -->
+      <section id="crm-section-testimonials" class="crm-section" style="display: none;">
+        <div class="technical-spec-card flat-architecture p-6 bg-white mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="font-headline-md text-headline-md font-bold">Public Site Testimonials</h2>
+            <span class="font-mono text-xs text-secondary">PUBLISH / HIDE REVIEWS</span>
+          </div>
+          <div id="crm-testimonials-list">
+            <!-- Dynamically Populated -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Site Settings (Public Stats) -->
+      <section id="crm-section-settings" class="crm-section" style="display: none;">
+        <div class="technical-spec-card flat-architecture p-6 bg-white max-w-xl">
+          <h2 class="font-headline-md text-headline-md font-bold mb-4">Live Public Site Stats Manager</h2>
+          <p class="text-sm text-secondary mb-6">Update the statistics rendered on the public homepage. No code deployment required.</p>
+          
+          <form id="crm-site-settings-form" class="space-y-4">
+            <div>
+              <label class="block font-mono text-xs font-bold uppercase mb-1">Years Experience</label>
+              <input type="number" name="years_experience" required class="w-full p-3 border border-outline font-mono"/>
+            </div>
+            <div>
+              <label class="block font-mono text-xs font-bold uppercase mb-1">Installations Count</label>
+              <input type="number" name="installations" required class="w-full p-3 border border-outline font-mono"/>
+            </div>
+            <div>
+              <label class="block font-mono text-xs font-bold uppercase mb-1">Active Clients Count</label>
+              <input type="number" name="active_clients" required class="w-full p-3 border border-outline font-mono"/>
+            </div>
+            <div>
+              <label class="block font-mono text-xs font-bold uppercase mb-1">Support Hours Label</label>
+              <input type="text" name="support_hours_label" required class="w-full p-3 border border-outline font-mono"/>
+            </div>
+            <button type="submit" class="bg-primary text-white px-6 py-3 font-mono font-bold uppercase hover:bg-primary-container">
+              SAVE PUBLIC STATS
+            </button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/crm.js"></script>
+</body>
+</html>

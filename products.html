@@ -1,374 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Safety Products Catalog | UR Fire Safety Solution Vadodara</title>
-  <meta name="description" content="Browse our catalog of certified fire extinguishers (ABC, CO2, Foam), smoke detectors, alarms bells, manual call points, Kevlar suits, and safety helmets.">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Products Catalog | UR Fire Safety Solution Vadodara</title>
+  <meta name="description" content="Browse UR Fire Safety Solution certified hardware: ABC, CO2 & Foam fire extinguishers, smoke detectors, alarm bells, Kevlar suits, and safety helmets."/>
   
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Material Symbols & Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/UR_Fire_Logo.svg">
+  <!-- Tailwind CDN & Custom Config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8f000d",
+            "primary-container": "#b22222",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#ffb4ac",
+            "surface-dim": "#dadada",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f3",
+            "surface-container": "#eeeeee",
+            "surface-container-high": "#e8e8e8",
+            "surface-container-highest": "#e2e2e2",
+            "surface-variant": "#e2e2e2",
+            "on-surface": "#1a1c1c",
+            "on-surface-variant": "#5a403e",
+            "inverse-surface": "#2f3131",
+            "inverse-on-surface": "#f1f1f1",
+            "secondary": "#5f5e5e",
+            "secondary-container": "#e4e2e1",
+            "on-secondary-container": "#656464",
+            "tertiary": "#444545",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#5c5c5c",
+            "on-tertiary-container": "#d6d4d4",
+            "background": "#f9f9f9",
+            "surface": "#f9f9f9",
+            "outline": "#8e706d",
+            "outline-variant": "#e2beba"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "16px",
+            "gutter": "24px",
+            "container-max": "1280px",
+            "margin-desktop": "48px"
+          },
+          fontFamily: {
+            "headline-md": ["IBM Plex Sans Condensed"],
+            "headline-lg": ["IBM Plex Sans Condensed"],
+            "display-lg": ["IBM Plex Sans Condensed"],
+            "body-md": ["IBM Plex Sans"],
+            "label-sm": ["JetBrains Mono"],
+            "body-lg": ["IBM Plex Sans"]
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
+<body class="bg-background text-on-surface font-body-md">
 
-  <!-- ==========================================================================
-       Header / Navigation
-       ========================================================================== -->
-  <header class="site-header" id="mainHeader">
-    <div class="container header-container">
-      <a href="index.html" class="logo-link" id="logoLink">
-         <img src="assets/UR_Fire_Logo.svg" alt="UR Fire Safety Solution Logo" class="logo-image">
-       </a>
-
-      <nav class="site-navigation">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="products.html" class="nav-link active">Products</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="contact.html?inquiry=quote" class="nav-cta">Get A Quote</a></li>
-        </ul>
-      </nav>
-
-      <button class="hamburger" aria-label="Toggle Navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-surface border-b border-outline w-full">
+    <div class="flex flex-col w-full max-w-container-max mx-auto px-margin-desktop">
+      <div class="flex items-center justify-between py-4">
+        <a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-primary flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+          UR FIRE SAFETY SOLUTION
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="index.html">Home</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="services.html">Services</a>
+          <a class="text-primary font-bold border-b-2 border-primary py-1 font-label-sm text-label-sm" href="products.html">Products</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="about.html">About</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="contact.html">Contact</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="admin.html">CRM Portal</a>
+        </nav>
+        <div class="hidden md:block">
+          <a href="tel:9274733827" class="bg-primary text-on-primary px-4 py-2 font-label-sm text-label-sm font-bold inline-flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">call</span>
+            EMERGENCY: +91 9274733827
+          </a>
+        </div>
+        <button class="md:hidden text-primary mobile-menu-trigger p-2" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- ==========================================================================
-       Page Banner Section
-       ========================================================================== -->
-  <section class="page-banner" id="productsBanner">
-    <div class="container">
-      <h1 class="banner-title">Our Products Catalog</h1>
-      <ul class="banner-breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <li>Products</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       Products Showcase / Grid
-       ========================================================================== -->
-  <section class="section-padding" id="productsShowcase">
-    <div class="container">
-      
-      <!-- Horizontal filter buttons -->
-      <div class="products-filter">
-        <button class="filter-btn active" data-filter="all">All Equipment</button>
-        <button class="filter-btn" data-filter="extinguishers">Extinguishers</button>
-        <button class="filter-btn" data-filter="alarms">Alarm Parts</button>
-        <button class="filter-btn" data-filter="ppe">PPE & Safety Wear</button>
+  <main>
+    <!-- Page Header Banner -->
+    <section class="relative overflow-hidden text-inverse-on-surface py-16 border-b-4 border-primary">
+      <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/85 to-on-surface/70"></div>
       </div>
+      <div class="relative z-10 max-w-container-max mx-auto px-margin-desktop">
+        <div class="font-label-sm text-label-sm text-primary-fixed-dim font-bold uppercase mb-2">Hardware Suite</div>
+        <h1 class="font-display-lg text-display-lg mb-4">Certified Equipment &amp; Products Catalog</h1>
+        <p class="font-body-lg text-body-lg text-on-tertiary-container max-w-2xl">All fire extinguishers, sensors, alarm bells, and personal protective wear carry original Bureau of Indian Standards (ISI) or EN certification stamps.</p>
+      </div>
+    </section>
 
-      <!-- Products Grid -->
-      <div class="grid-4" id="productsGrid">
+    <!-- Catalog & Filters -->
+    <section class="py-20 bg-background">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
         
-        <!-- Product 1: ABC Extinguisher -->
-        <div class="product-card" data-category="extinguishers">
-          <div class="product-image">
-            <span class="product-badge">BEST SELLER</span>
-            <!-- Custom Extinguisher SVG -->
-            <svg viewBox="0 0 100 100">
-              <rect x="42" y="38" width="16" height="42" rx="2" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <path d="M42,38 C42,32 58,32 58,38 Z" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <rect x="48" y="28" width="4" height="10" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-              <circle cx="44" cy="24" r="3" fill="none" stroke="#1a1c1c" stroke-width="1.2"/>
-              <path d="M42,46 L58,46" stroke="#ffffff" stroke-width="3"/>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">ABC Powder Extinguisher</h3>
-            <p class="product-description">Highly versatile fire protection. Ideal for wood, electrical, and liquid fires. Available in 4kg, 6kg, and 9kg capacities.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">MAP 90% / ISI</span>
-              <a href="contact.html?inquiry=extinguishers" class="product-btn">Inquire &rarr;</a>
-            </div>
-          </div>
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap gap-4 mb-12 border-b border-outline-variant pb-6">
+          <button class="filter-btn bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm font-bold uppercase" data-filter="all">
+            All Equipment
+          </button>
+          <button class="filter-btn bg-surface text-secondary border border-outline px-6 py-3 font-label-sm text-label-sm font-bold uppercase hover:text-primary" data-filter="extinguishers">
+            Fire Extinguishers
+          </button>
+          <button class="filter-btn bg-surface text-secondary border border-outline px-6 py-3 font-label-sm text-label-sm font-bold uppercase hover:text-primary" data-filter="alarms">
+            Alarm Parts
+          </button>
+          <button class="filter-btn bg-surface text-secondary border border-outline px-6 py-3 font-label-sm text-label-sm font-bold uppercase hover:text-primary" data-filter="ppe">
+            PPE Wear &amp; Gear
+          </button>
         </div>
 
-        <!-- Product 2: CO2 Extinguisher -->
-        <div class="product-card" data-category="extinguishers">
-          <div class="product-image">
-            <svg viewBox="0 0 100 100">
-              <rect x="43" y="35" width="14" height="46" rx="2" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <path d="M43,35 C43,28 57,28 57,35 Z" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <rect x="48" y="24" width="4" height="11" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-              <!-- Huge black discharge horn for CO2 -->
-              <path d="M 38,42 C 28,45 28,58 35,58 L 35,45 Z" fill="#1a1c1c" stroke="#1a1c1c" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">CO2 Gas Extinguisher</h3>
-            <p class="product-description">Premium carbon dioxide gas discharge. Leaves no residue. Best suited for server rooms, panels, and digital infrastructure.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">Clean Agent / ISI</span>
-              <a href="contact.html?inquiry=extinguishers" class="product-btn">Inquire &rarr;</a>
+        <!-- Product Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter" id="products-grid">
+          
+          <!-- Product 1 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="extinguishers">
+            <div>
+              <div class="bg-primary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">BEST SELLER</div>
+              <h3 class="font-headline-md text-headline-md mb-2">ABC Powder Extinguisher</h3>
+              <p class="text-on-surface-variant text-sm mb-4">Multi-purpose protection for wood, paper, electrical, and liquid fires. Available in 4kg, 6kg, 9kg.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">MAP 90% / ISI</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
             </div>
           </div>
-        </div>
 
-        <!-- Product 3: Foam Extinguisher -->
-        <div class="product-card" data-category="extinguishers">
-          <div class="product-image">
-            <svg viewBox="0 0 100 100">
-              <rect x="42" y="38" width="16" height="42" rx="2" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <path d="M42,38 C42,32 58,32 58,38 Z" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <rect x="48" y="28" width="4" height="10" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-              <path d="M42,46 L58,46" stroke="#eeeeee" stroke-width="3"/>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Water & Foam Extinguisher</h3>
-            <p class="product-description">Specifically designed for Class A solid fuels and Class B flammable liquid fires. Available in high-output 9L options.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">High Expansion</span>
-              <a href="contact.html?inquiry=extinguishers" class="product-btn">Inquire &rarr;</a>
+          <!-- Product 2 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="extinguishers">
+            <div>
+              <div class="bg-secondary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">CLEAN AGENT</div>
+              <h3 class="font-headline-md text-headline-md mb-2">CO2 Gas Extinguisher</h3>
+              <p class="text-on-surface-variant text-sm mb-4">Carbon dioxide gas discharge with zero residue. Designed for server rooms &amp; electrical panels.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">PESO APPROVED</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
             </div>
           </div>
-        </div>
 
-        <!-- Product 4: Smoke Detector -->
-        <div class="product-card" data-category="alarms">
-          <div class="product-image">
-            <!-- Custom Sensor SVG -->
-            <svg viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="32" fill="#ffffff" stroke="#1a1c1c" stroke-width="2"/>
-              <circle cx="50" cy="50" r="24" fill="#eeeeee" stroke="#1a1c1c" stroke-width="1.5"/>
-              <circle cx="50" cy="50" r="6" fill="#b1000f"/>
-              <!-- Slots on sensor outer boundary -->
-              <path d="M35,28 L30,22 M65,28 L70,22 M35,72 L30,78 M65,72 L70,78" stroke="#1a1c1c" stroke-width="2"/>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Photoelectric Smoke Detector</h3>
-            <p class="product-description">High-sensitivity smart smoke alarm with dual-LED visual warning indicators. Perfect for early smoldering fire alerts.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">EN 54 / CE</span>
-              <a href="contact.html?inquiry=alarms" class="product-btn">Inquire &rarr;</a>
+          <!-- Product 3 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="extinguishers">
+            <div>
+              <div class="bg-secondary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">HIGH EXPANSION</div>
+              <h3 class="font-headline-md text-headline-md mb-2">Foam &amp; Water Extinguisher</h3>
+              <p class="text-on-surface-variant text-sm mb-4">AFFF 3% foam agent for Class A solid fuels and Class B flammable liquid fires. Available in 9L.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">IS 15683</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
             </div>
           </div>
-        </div>
 
-        <!-- Product 5: Fire Alarm Bell -->
-        <div class="product-card" data-category="alarms">
-          <div class="product-image">
-            <svg viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="30" fill="#b1000f" stroke="#1a1c1c" stroke-width="2.5"/>
-              <circle cx="50" cy="50" r="6" fill="#e2dfde" stroke="#1a1c1c" stroke-width="2"/>
-              <rect x="48" y="14" width="4" height="12" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Heavy Industrial Alarm Bell</h3>
-            <p class="product-description">6-inch high-decibel warning gong designed to deliver high audits penetration across heavy noisy industrial zones.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">95dB Output / IS</span>
-              <a href="contact.html?inquiry=alarms" class="product-btn">Inquire &rarr;</a>
+          <!-- Product 4 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="alarms">
+            <div>
+              <div class="bg-primary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">SMART SENSOR</div>
+              <h3 class="font-headline-md text-headline-md mb-2">Photoelectric Smoke Sensor</h3>
+              <p class="text-on-surface-variant text-sm mb-4">Dual-LED optical smoke detector for early warning smoldering fire alerts in high-rise buildings.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">EN 54 / CE</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
             </div>
           </div>
-        </div>
 
-        <!-- Product 6: Manual Call Point -->
-        <div class="product-card" data-category="alarms">
-          <div class="product-image">
-            <svg viewBox="0 0 100 100">
-              <rect x="32" y="28" width="36" height="44" rx="2" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <!-- Glass plate inside -->
-              <rect x="40" y="44" width="20" height="14" fill="#ffffff" stroke="#1a1c1c" stroke-width="1.5"/>
-              <text x="50" y="54" font-family="sans-serif" font-weight="bold" font-size="8" fill="#b1000f" text-anchor="middle">PRESS</text>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Break-Glass Manual Call Point</h3>
-            <p class="product-description">Emergency alarm manual pull station with reset keys. Durable high-impact polymer plastic shell for long active life.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">Reset Key Type</span>
-              <a href="contact.html?inquiry=alarms" class="product-btn">Inquire &rarr;</a>
+          <!-- Product 5 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="alarms">
+            <div>
+              <div class="bg-secondary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">HEAVY DUTY</div>
+              <h3 class="font-headline-md text-headline-md mb-2">Industrial Alarm Bell</h3>
+              <p class="text-on-surface-variant text-sm mb-4">6-inch high-decibel (95dB) gong for high-noise manufacturing plants &amp; warehouse zones.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">95dB OUTPUT</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
             </div>
           </div>
-        </div>
 
-        <!-- Product 7: NOMEX Fire Suit -->
-        <div class="product-card" data-category="ppe">
-          <div class="product-image">
-            <!-- Custom Suit SVG -->
-            <svg viewBox="0 0 100 100">
-              <path d="M 32,32 L 68,32 L 72,50 L 62,50 L 62,86 L 38,86 L 38,50 L 28,50 Z" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-              <!-- Reflective silver strips -->
-              <rect x="32" y="42" width="36" height="4" fill="#e2dfde" stroke="#1a1c1c" stroke-width="1"/>
-              <rect x="38" y="72" width="24" height="4" fill="#e2dfde" stroke="#1a1c1c" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Multi-Layer NOMEX Fire Suit</h3>
-            <p class="product-description">Premium certified protective fire jacket and trouser gear, featuring water-impermeable lining and thermal barrier shields.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">EN 469 Standard</span>
-              <a href="contact.html?inquiry=ppe" class="product-btn">Inquire &rarr;</a>
+          <!-- Product 6 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="alarms">
+            <div>
+              <div class="bg-secondary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">MANUAL CALL</div>
+              <h3 class="font-headline-md text-headline-md mb-2">Break-Glass Call Point</h3>
+              <p class="text-on-surface-variant text-sm mb-4">Emergency pull station with key reset mechanism in high-impact red polymer housing.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">RESET KEY</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
             </div>
           </div>
-        </div>
 
-        <!-- Product 8: High-Density Helmet -->
-        <div class="product-card" data-category="ppe">
-          <div class="product-image">
-            <svg viewBox="0 0 100 100">
-              <path d="M22,58 C22,30 32,20 50,20 C68,20 78,30 78,58 Z" fill="#F5A623" stroke="#1a1c1c" stroke-width="2"/>
-              <path d="M14,58 L86,58 C88,58 88,61 86,61 L14,61 C12,61 12,58 14,58 Z" fill="#e2dfde" stroke="#1a1c1c" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Heavy-Duty Safety Helmet</h3>
-            <p class="product-description">High-density polymer shell with protective visor and shock absorption harnesses. Tested to withstand high mechanical impacts.</p>
-            <div class="product-footer">
-              <span class="product-spec-badge">IS 2925 Certified</span>
-              <a href="contact.html?inquiry=ppe" class="product-btn">Inquire &rarr;</a>
+          <!-- Product 7 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="ppe">
+            <div>
+              <div class="bg-primary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">THERMAL SHIELD</div>
+              <h3 class="font-headline-md text-headline-md mb-2">Nomex/Kevlar Fire Suit</h3>
+              <p class="text-on-surface-variant text-sm mb-4">Multi-layer protective jacket &amp; trouser gear with moisture membrane and radiant heat barrier.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">EN 469 STANDARD</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
             </div>
           </div>
-        </div>
 
+          <!-- Product 8 -->
+          <div class="product-card technical-spec-card flat-architecture p-6 flex flex-col justify-between" data-category="ppe">
+            <div>
+              <div class="bg-secondary text-white text-[10px] font-mono px-2 py-1 inline-block font-bold mb-4">IMPACT PROTECT</div>
+              <h3 class="font-headline-md text-headline-md mb-2">Industrial Safety Helmet</h3>
+              <p class="text-on-surface-variant text-sm mb-4">High-density polymer shell with protective visor and shock absorption harness for electrical operators.</p>
+            </div>
+            <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+              <span class="font-label-sm text-label-sm bg-secondary-container px-2 py-1">IS 2925</span>
+              <button class="open-quote-modal text-primary font-bold font-label-sm text-label-sm uppercase">Inquire</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Emergency Response Bar -->
+  <div class="fixed bottom-0 left-0 w-full z-[100] bg-primary text-on-primary py-3 emergency-glow border-t-2 border-primary-fixed">
+    <div class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined animate-pulse">emergency_share</span>
+        <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Emergency Response Unit</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a class="font-headline-md text-headline-md hover:underline" href="tel:9274733827">+91 9274733827</a>
+        <span class="hidden md:inline font-label-sm text-label-sm opacity-80">| VADODARA REGION</span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ==========================================================================
-       Emergency Support Banner Strip
-       ========================================================================== -->
-  <section class="emergency-strip">
-    <div class="container emergency-container">
-      <div class="emergency-text">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-          <line x1="12" y1="9" x2="12" y2="13"/>
-          <line x1="12" y1="17" x2="12.01" y2="17"/>
-        </svg>
-        Need Bulk Wholesale Pricing or Quotations?
+  <!-- Footer -->
+  <footer class="bg-tertiary text-on-tertiary w-full border-t-4 border-primary pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+      <div>
+        <div class="font-headline-lg text-headline-lg text-on-tertiary uppercase mb-6 leading-none">UR FIRE<br/>SAFETY</div>
+        <p class="font-body-md opacity-80">Professional grade fire protection for industrial &amp; commercial sectors.</p>
       </div>
-      <a href="tel:9274733827" class="btn btn-emergency">Call Sales Desk</a>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       Footer
-       ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <a href="index.html" class="logo-link">
-          <img src="assets/UR_Fire_Logo.svg" alt="UR Fire Safety Solution Logo" class="logo-image" style="height: 45px;">
-        </a>
-        <p class="footer-desc">Providing high-grade fire protection solutions for industrial and commercial sectors. Reliability in every spark.</p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="services.html#extinguishers">Fire Extinguishers</a></li>
-          <li><a href="services.html#hydrants">Hydrant Systems</a></li>
-          <li><a href="services.html#alarms">Alarm Systems</a></li>
-          <li><a href="services.html#refilling">Equipment Refilling</a></li>
-          <li><a href="services.html#maintenance">AMC Maintenance</a></li>
+      <div>
+        <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Compliance</h4>
+        <ul class="space-y-3 font-body-md opacity-80">
+          <li>GST: 24AAAAA0000A1Z5</li>
+          <li>ISO 9001:2015</li>
+          <li>License: FIRE/VAD/102</li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="about.html#certifications">Safety Certifications</a></li>
-          <li><a href="products.html">Product Catalog</a></li>
-          <li><a href="contact.html">Client Portal</a></li>
-          <li><a href="about.html#terms">Terms & Conditions</a></li>
+      <div>
+        <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Quick Links</h4>
+        <ul class="space-y-3 font-body-md opacity-80">
+          <li><a href="index.html" class="hover:text-primary-fixed-dim">Home</a></li>
+          <li><a href="services.html" class="hover:text-primary-fixed-dim">Services</a></li>
+          <li><a href="about.html" class="hover:text-primary-fixed-dim">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-primary-fixed-dim">Contact</a></li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h3>Contact Info</h3>
-        <ul class="footer-contact-info">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <div>9274733827</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <div>urfiresafetysolution@gmail.com</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <div>B-20 Shivam Tenament, Channi Jakatnaka, Vadodara 390024</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p class="copyright-text">&copy; 2026 UR Fire Safety Solution. Reliability in every spark.</p>
-      <div class="footer-socials">
-        <a href="https://facebook.com" class="social-link">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
-        </a>
-        <a href="tel:9274733827" class="social-link">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-        </a>
+      <div>
+        <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Contact</h4>
+        <p class="font-body-md opacity-80 mb-2">B-20 Shivam Tenament, Channi Jakatnaka, Vadodara 390024</p>
+        <p class="font-body-md opacity-80">P: +91 9274733827</p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/919274733827?text=Hello,%20I'm%20interested%20in%20your%20fire%20safety%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.455h.008c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <!-- JS script -->
   <script src="js/main.js"></script>
-  <script>
-    // Additional Products-filtering client logic 
-    document.addEventListener('DOMContentLoaded', () => {
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      const productCards = document.querySelectorAll('.product-card');
-
-      filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Reset active state
-          filterButtons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-
-          const filterValue = btn.getAttribute('data-filter');
-
-          productCards.forEach(card => {
-            const cardCat = card.getAttribute('data-category');
-            if (filterValue === 'all' || cardCat === filterValue) {
-              card.style.display = 'flex';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-    });
-  </script>
 </body>
 </html>

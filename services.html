@@ -1,307 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fire Safety Services | UR Fire Safety Solution Vadodara</title>
-  <meta name="description" content="Explore our professional services: Fire Extinguisher supply & refilling, automatic Alarm systems, Hydrant design, standard-compliant AMC, and certified PPE gear.">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Technical Services &amp; Compliance | UR Fire Safety Solution Vadodara</title>
+  <meta name="description" content="Explore UR Fire Safety Solution technical services: Fire Extinguishers supply, Hydrant Networks, Alarm Systems, PESO Hydrotesting, AMC Contracts, and PPE Apparel."/>
   
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Material Symbols & Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/UR_Fire_Logo.svg">
+  <!-- Tailwind CDN & Custom Config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8f000d",
+            "primary-container": "#b22222",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#ffb4ac",
+            "surface-dim": "#dadada",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f3",
+            "surface-container": "#eeeeee",
+            "surface-container-high": "#e8e8e8",
+            "surface-container-highest": "#e2e2e2",
+            "surface-variant": "#e2e2e2",
+            "on-surface": "#1a1c1c",
+            "on-surface-variant": "#5a403e",
+            "inverse-surface": "#2f3131",
+            "inverse-on-surface": "#f1f1f1",
+            "secondary": "#5f5e5e",
+            "secondary-container": "#e4e2e1",
+            "on-secondary-container": "#656464",
+            "tertiary": "#444545",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#5c5c5c",
+            "on-tertiary-container": "#d6d4d4",
+            "background": "#f9f9f9",
+            "surface": "#f9f9f9",
+            "outline": "#8e706d",
+            "outline-variant": "#e2beba"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "16px",
+            "gutter": "24px",
+            "container-max": "1280px",
+            "margin-desktop": "48px"
+          },
+          fontFamily: {
+            "headline-md": ["IBM Plex Sans Condensed"],
+            "headline-lg": ["IBM Plex Sans Condensed"],
+            "display-lg": ["IBM Plex Sans Condensed"],
+            "body-md": ["IBM Plex Sans"],
+            "label-sm": ["JetBrains Mono"],
+            "body-lg": ["IBM Plex Sans"]
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
+<body class="bg-background text-on-surface font-body-md">
 
-  <!-- ==========================================================================
-       Header / Navigation
-       ========================================================================== -->
-  <header class="site-header" id="mainHeader">
-    <div class="container header-container">
-      <a href="index.html" class="logo-link" id="logoLink">
-         <img src="assets/UR_Fire_Logo.svg" alt="UR Fire Safety Solution Logo" class="logo-image">
-       </a>
-
-      <nav class="site-navigation">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="services.html" class="nav-link active">Services</a></li>
-          <li><a href="products.html" class="nav-link">Products</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="contact.html?inquiry=quote" class="nav-cta">Get A Quote</a></li>
-        </ul>
-      </nav>
-
-      <button class="hamburger" aria-label="Toggle Navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <!-- Sticky Top Header -->
+  <header class="sticky top-0 z-50 bg-surface border-b border-outline w-full">
+    <div class="flex flex-col w-full max-w-container-max mx-auto px-margin-desktop">
+      <div class="flex items-center justify-between py-4">
+        <a href="index.html" class="font-headline-md text-headline-md font-bold tracking-tighter text-primary flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+          UR FIRE SAFETY SOLUTION
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="index.html">Home</a>
+          <a class="text-primary font-bold border-b-2 border-primary py-1 font-label-sm text-label-sm" href="services.html">Services</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="products.html">Products</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="about.html">About</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="contact.html">Contact</a>
+          <a class="text-secondary font-medium hover:text-primary transition-colors py-1 font-label-sm text-label-sm" href="admin.html">CRM Portal</a>
+        </nav>
+        <div class="hidden md:block">
+          <a href="tel:9274733827" class="bg-primary text-on-primary px-4 py-2 font-label-sm text-label-sm font-bold inline-flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">call</span>
+            EMERGENCY: +91 9274733827
+          </a>
+        </div>
+        <button class="md:hidden text-primary mobile-menu-trigger p-2" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- ==========================================================================
-       Page Banner Section
-       ========================================================================== -->
-  <section class="page-banner" id="servicesBanner">
-    <div class="container">
-      <h1 class="banner-title">Our Technical Services</h1>
-      <ul class="banner-breadcrumb">
-        <li><a href="index.html">Home</a></li>
-        <li>Services</li>
-      </ul>
+  <main>
+    <!-- Page Header Banner -->
+    <section class="relative overflow-hidden text-inverse-on-surface py-16 border-b-4 border-primary">
+      <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/85 to-on-surface/70"></div>
+      </div>
+      <div class="relative z-10 max-w-container-max mx-auto px-margin-desktop">
+        <div class="font-label-sm text-label-sm text-primary-fixed-dim font-bold uppercase mb-2">Technical Capabilities</div>
+        <h1 class="font-display-lg text-display-lg mb-4">Engineering Services &amp; Compliance</h1>
+        <p class="font-body-lg text-body-lg text-on-tertiary-container max-w-2xl">From architectural layout design to PESO hydrotesting, our engineering operations strictly comply with National Building Code (NBC Section 4) and IS 13039 safety standards.</p>
+      </div>
+    </section>
+
+    <!-- Detailed Services List -->
+    <section class="py-20 bg-background">
+      <div class="max-w-container-max mx-auto px-margin-desktop space-y-16">
+
+        <!-- Service 1: Hydrants & Sprinklers -->
+        <div id="hydrants" class="technical-spec-card flat-architecture p-8">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b border-outline-variant pb-4">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary font-bold block mb-1">SERVICE ID: SRV-01-HYD</span>
+              <h2 class="font-headline-lg text-headline-lg">1. Turnkey Hydrant &amp; Automatic Sprinkler Systems</h2>
+            </div>
+            <button class="open-quote-modal bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm font-bold uppercase">
+              Inquire Installation
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <p class="text-on-surface-variant mb-4">We design, procure, and install complete fire hydrant networks and sprinkler systems for chemical manufacturing plants, commercial high-rises, logistics hubs, and residential complexes across Gujarat.</p>
+              <ul class="space-y-2 font-body-md">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> High-pressure diesel &amp; electric fire pump room installation</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Wet riser &amp; dry riser piping layout calculation</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Automatic bulb sprinkler distribution networks</li>
+              </ul>
+            </div>
+            <div>
+              <table class="technical-table">
+                <thead>
+                  <tr><th>SPECIFICATION</th><th>COMPLIANCE STANDARD</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Piping Standard</td><td>IS 1239 / Heavy Duty MS Pipe</td></tr>
+                  <tr><td>Hydrant Valves</td><td>IS 5290 Gunmetal Double Outlet</td></tr>
+                  <tr><td>Code Approval</td><td>NBC 2016 Part 4 &amp; TAC Approved</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Fire Alarms -->
+        <div id="alarms" class="technical-spec-card flat-architecture p-8">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b border-outline-variant pb-4">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary font-bold block mb-1">SERVICE ID: SRV-02-ALM</span>
+              <h2 class="font-headline-lg text-headline-lg">2. Addressable &amp; Conventional Fire Alarm Networks</h2>
+            </div>
+            <button class="open-quote-modal bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm font-bold uppercase">
+              Inquire Alarm Setup
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <p class="text-on-surface-variant mb-4">Early threat detection saves lives. We engineer intelligent smoke, heat, and flame detection networks that pinpoint exact alarm zones on centralized control panels.</p>
+              <ul class="space-y-2 font-body-md">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Microprocessor-based addressable master alarm panels</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Optical photoelectric smoke &amp; thermal heat sensors</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Break-glass manual call points &amp; 95dB strobe hooters</li>
+              </ul>
+            </div>
+            <div>
+              <table class="technical-table">
+                <thead>
+                  <tr><th>SYSTEM TYPE</th><th>SUITABLE APPLICATION</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Addressable System</td><td>Large industrial &amp; multi-story commercial</td></tr>
+                  <tr><td>Conventional System</td><td>Single-floor offices &amp; residential housing</td></tr>
+                  <tr><td>Standards</td><td>EN 54 / IS 2189 Certified Hardware</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Refilling & Hydrotesting -->
+        <div id="refilling" class="technical-spec-card flat-architecture p-8">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b border-outline-variant pb-4">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary font-bold block mb-1">SERVICE ID: SRV-03-REF</span>
+              <h2 class="font-headline-lg text-headline-lg">3. Equipment Refilling &amp; PESO Hydrotesting</h2>
+            </div>
+            <button class="open-quote-modal bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm font-bold uppercase">
+              Book Refilling
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <p class="text-on-surface-variant mb-4">Extinguishers lose pressure and chemical potency over time. Our PESO-approved laboratory provides complete hydraulic stretch testing, gas refilling, and safety certification tags.</p>
+              <ul class="space-y-2 font-body-md">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> MAP 90% Dry Chemical Powder refilling for ABC cylinders</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> High-pressure CO2 gas refilling with moisture filtration</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hydrostatic pressure testing to detect shell micro-cracks</li>
+              </ul>
+            </div>
+            <div>
+              <table class="technical-table">
+                <thead>
+                  <tr><th>EXTINGUISHER AGENT</th><th>TEST PRESSURE</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>ABC Powder (MAP 90%)</td><td>35 kg/cm² (IS 15683)</td></tr>
+                  <tr><td>CO2 Gas (Clean Agent)</td><td>250 kg/cm² (PESO Approved)</td></tr>
+                  <tr><td>Foam &amp; Water</td><td>35 kg/cm² (AFFF 3%)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: AMC Maintenance -->
+        <div id="amc" class="technical-spec-card flat-architecture p-8">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b border-outline-variant pb-4">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary font-bold block mb-1">SERVICE ID: SRV-04-AMC</span>
+              <h2 class="font-headline-lg text-headline-lg">4. Annual Maintenance Contracts (AMC)</h2>
+            </div>
+            <button class="open-quote-modal bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm font-bold uppercase">
+              Get AMC Quote
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div>
+              <p class="text-on-surface-variant mb-4">Fire safety hardware is useless if it fails during a crisis. Our AMC contracts guarantee structured quarterly inspections, pressure checks, emergency call-outs, and compliance audit reports.</p>
+              <ul class="space-y-2 font-body-md">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 4 quarterly physical inspections &amp; nozzle cleaning</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Guaranteed 2-hour emergency response team in Vadodara</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Fire safety audit logbook &amp; compliance certificate issue</li>
+              </ul>
+            </div>
+            <div>
+              <table class="technical-table">
+                <thead>
+                  <tr><th>CONTRACT TIER</th><th>INSPECTION FREQUENCY</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Industrial AMC</td><td>Monthly audit + 24/7 Hotline</td></tr>
+                  <tr><td>Commercial AMC</td><td>Quarterly (4 visits/year)</td></tr>
+                  <tr><td>Residential AMC</td><td>Bi-annual (2 visits/year)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Emergency Response Bar -->
+  <div class="fixed bottom-0 left-0 w-full z-[100] bg-primary text-on-primary py-3 emergency-glow border-t-2 border-primary-fixed">
+    <div class="max-w-container-max mx-auto px-margin-desktop flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined animate-pulse">emergency_share</span>
+        <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Emergency Response Unit</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a class="font-headline-md text-headline-md hover:underline" href="tel:9274733827">+91 9274733827</a>
+        <span class="hidden md:inline font-label-sm text-label-sm opacity-80">| VADODARA REGION</span>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ==========================================================================
-       Detailed Services Sections
-       ========================================================================== -->
-  <section class="section-padding" id="servicesDetail" style="background-color: var(--color-surface-container-lowest);">
-    <div class="container" style="display: flex; flex-direction: column; gap: var(--space-xl);">
-
-      <!-- Service 1: Fire Extinguishers -->
-      <div class="service-detail-section" id="extinguishers">
-        <div class="service-detail-content">
-          <h2 class="section-title">1. Fire Extinguishers Supply & Consulting</h2>
-          <p>We supply premium-grade, ISI-marked fire extinguishers specifically selected for different hazard levels. Correct placement and classification selection is critical to ensuring rapid suppression when a hazard occurs.</p>
-          
-          <h4 style="margin-top: 16px;">Classifications Supplied:</h4>
-          <p style="margin-bottom: 8px;"><strong>• ABC Dry Powder:</strong> Multi-purpose protection suitable for wood, paper, liquids, and electrical fires.</p>
-          <p style="margin-bottom: 8px;"><strong>• Carbon Dioxide (CO2):</strong> Premium gas-based discharge ideal for delicate server rooms and heavy electrical switchgear.</p>
-          <p style="margin-bottom: 8px;"><strong>• Foam & Water:</strong> Tailored for combustible solid materials and fuel/oil fires.</p>
-          
-          <a href="contact.html?inquiry=extinguishers" class="btn btn-primary" style="margin-top: 20px;">Get a Quote</a>
-        </div>
-        <div class="service-detail-image">
-          <!-- Fire Extinguisher Vector Drawing -->
-          <svg viewBox="0 0 100 100">
-            <rect x="38" y="35" width="24" height="50" rx="3" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-            <path d="M38,35 C38,28 62,28 62,35 Z" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-            <rect x="47" y="24" width="6" height="8" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-            <path d="M47,24 C47,24 60,18 70,24 C72,25 72,28 68,28 C60,28 53,24 53,24" fill="none" stroke="#1a1c1c" stroke-width="2"/>
-            <circle cx="43" cy="20" r="4" fill="none" stroke="#1a1c1c" stroke-width="1.5"/>
-            <path d="M 38,45 C 30,50 30,70 38,70" fill="none" stroke="#1a1c1c" stroke-width="2.5"/>
-          </svg>
-        </div>
+  <!-- Footer -->
+  <footer class="bg-tertiary text-on-tertiary w-full border-t-4 border-primary pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+      <div>
+        <div class="font-headline-lg text-headline-lg text-on-tertiary uppercase mb-6 leading-none">UR FIRE<br/>SAFETY</div>
+        <p class="font-body-md opacity-80">Professional grade fire protection for industrial &amp; commercial sectors.</p>
       </div>
-
-      <!-- Service 2: Fire Alarm Systems -->
-      <div class="service-detail-section" id="alarms">
-        <div class="service-detail-content">
-          <h2 class="section-title">2. Fire Alarm & Detection Systems</h2>
-          <p>Early warning is the difference between a minor incident and a complete disaster. Our engineers design and install high-sensitivity smoke, heat, and flame detection system networks tailored to the physical characteristics of your building layout.</p>
-          
-          <h4 style="margin-top: 16px;">Systems Configured:</h4>
-          <p style="margin-bottom: 8px;"><strong>• Addressable Alarm Networks:</strong> Precise location mapping for massive industrial complexes and commercial centers.</p>
-          <p style="margin-bottom: 8px;"><strong>• Conventional Systems:</strong> Cost-effective zone-based detection setups for smaller offices and residential housing.</p>
-          <p style="margin-bottom: 8px;"><strong>• Integrated Alarm Testing:</strong> Periodic maintenance and calibration of heat/smoke sensors and manual call points.</p>
-          
-          <a href="contact.html?inquiry=alarms" class="btn btn-primary" style="margin-top: 20px;">Inquire Installation</a>
-        </div>
-        <div class="service-detail-image">
-          <!-- Fire Alarm Sensor / Bell SVG -->
-          <svg viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="38" fill="#eeeeee" stroke="#1a1c1c" stroke-width="2"/>
-            <circle cx="50" cy="50" r="28" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-            <circle cx="50" cy="50" r="8" fill="#e2dfde" stroke="#1a1c1c" stroke-width="1.5"/>
-            <rect x="47" y="16" width="6" height="12" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-            <!-- Strobe light detail -->
-            <path d="M 35,25 L 25,15 M 65,25 L 75,15" stroke="#F5A623" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Service 3: Hydrant Systems -->
-      <div class="service-detail-section" id="hydrants">
-        <div class="service-detail-content">
-          <h2 class="section-title">3. High-Pressure Hydrant Networks</h2>
-          <p>We undertake complete turnkey design, piping supply, installation, and commissioning of outdoor and indoor fire hydrant networks. All installations are executed under strict compliance guidelines from national and regional safety standards.</p>
-          
-          <h4 style="margin-top: 16px;">Technical Scope:</h4>
-          <p style="margin-bottom: 8px;"><strong>• Infrastructure:</strong> High-pressure water reservoirs, diesel-powered pump stations, ring main piping networks.</p>
-          <p style="margin-bottom: 8px;"><strong>• Terminals:</strong> Wet riser installations, external double-outlet hydrants, indoor hose cabinets, and canvas fire hoses.</p>
-          <p style="margin-bottom: 8px;"><strong>• Engineering Compliance:</strong> Full alignment with NBC Section 4 standards and IS 13039 safety guidelines.</p>
-          
-          <a href="contact.html?inquiry=hydrants" class="btn btn-primary" style="margin-top: 20px;">Request Design Audit</a>
-        </div>
-        <div class="service-detail-image">
-          <!-- Fire Hydrant Terminal SVG -->
-          <svg viewBox="0 0 100 100">
-            <path d="M30,85 L70,85" stroke="#1a1c1c" stroke-width="3" stroke-linecap="round"/>
-            <rect x="36" y="25" width="28" height="60" rx="4" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-            <!-- Top Dome -->
-            <path d="M36,25 C36,12 64,12 64,25 Z" fill="#b1000f" stroke="#1a1c1c" stroke-width="2"/>
-            <circle cx="50" cy="12" r="3" fill="#F5A623" stroke="#1a1c1c" stroke-width="1.5"/>
-            <!-- Side Outlets -->
-            <rect x="26" y="38" width="10" height="14" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-            <rect x="64" y="38" width="10" height="14" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-            <circle cx="50" cy="52" r="8" fill="#5f5e5e" stroke="#1a1c1c" stroke-width="1.5"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Service 4: Refilling & Maintenance -->
-      <div class="service-detail-section" id="refilling">
-        <div class="service-detail-content">
-          <h2 class="section-title">4. Hydrotesting, Refilling & AMC Contracts</h2>
-          <p>Fire safety hardware is only as good as its maintenance cycle. Over time, pressure loss, powder compaction, and seals leakage can render an extinguisher useless. We provide robust Annual Maintenance Contracts (AMC) to keep you fully protected.</p>
-          
-          <h4 style="margin-top: 16px;">Service Elements:</h4>
-          <p style="margin-bottom: 8px;"><strong>• On-Site Verification:</strong> Weight inspections, pressure gauge calibration, and structural checks.</p>
-          <p style="margin-bottom: 8px;"><strong>• Hydrostatic Testing:</strong> High-pressure water expansion testing of cylinders to identify microscopic shell cracks.</p>
-          <p style="margin-bottom: 8px;"><strong>• Certified Refilling:</strong> Refilling of dry chemical powder (MAP 90%), CO2 gas, or foam agents with official safety tags.</p>
-          
-          <a href="contact.html?inquiry=refilling" class="btn btn-primary" style="margin-top: 20px;">Book Refilling Service</a>
-        </div>
-        <div class="service-detail-image">
-          <!-- Refilling & Testing Gears SVG -->
-          <svg viewBox="0 0 100 100">
-            <path d="M25,25 C45,10 55,10 75,25 C80,35 80,65 75,75 C55,90 45,90 25,75 Z" fill="none" stroke="#1a1c1c" stroke-width="2"/>
-            <path d="M50,22 L50,78 M22,50 L78,50" stroke="#eeeeee" stroke-width="1.5"/>
-            <!-- Gauge pointer -->
-            <circle cx="50" cy="50" r="30" fill="#ffffff" stroke="#1a1c1c" stroke-width="2"/>
-            <path d="M50,50 L70,36" stroke="#b1000f" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="5" fill="#1a1c1c"/>
-            <path d="M 28,68 C 35,78 65,78 72,68" fill="none" stroke="#F5A623" stroke-width="4" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Service 5: PPE Gear supply -->
-      <div class="service-detail-section" id="maintenance">
-        <div class="service-detail-content">
-          <h2 class="section-title">5. Certified Personal Protective Equipment</h2>
-          <p>We supply industrial sites, electrical panel operators, and building emergency teams with fully certified protective apparel designed to resist radiant heat, mechanical impacts, and chemical hazards.</p>
-          
-          <h4 style="margin-top: 16px;">Product Suite:</h4>
-          <p style="margin-bottom: 8px;"><strong>• Safety Helmets:</strong> High-density polymer helmets with adjustable harnesses (EN 397 certified).</p>
-          <p style="margin-bottom: 8px;"><strong>• Apparel:</strong> Nomex/Kevlar multi-layer fire-resistant suits, industrial gloves, and heavy-duty safety boots.</p>
-          <p style="margin-bottom: 8px;"><strong>• Masks & Breathing Apparata:</strong> Self-Contained Breathing Apparatus (SCBA) kits for smoke-dense industrial areas.</p>
-          
-          <a href="contact.html?inquiry=ppe" class="btn btn-primary" style="margin-top: 20px;">Request Catalog</a>
-        </div>
-        <div class="service-detail-image">
-          <!-- Protective Helmet Vector SVG -->
-          <svg viewBox="0 0 100 100">
-            <path d="M20,60 C20,32 30,22 50,22 C70,22 80,32 80,60 Z" fill="#F5A623" stroke="#1a1c1c" stroke-width="2"/>
-            <!-- Rim of Helmet -->
-            <path d="M12,60 L88,60 C90,60 90,64 88,64 L12,64 C10,64 10,60 12,60 Z" fill="#e2dfde" stroke="#1a1c1c" stroke-width="1.5"/>
-            <!-- Chin strap -->
-            <path d="M 32,64 C 32,80 68,80 68,64" fill="none" stroke="#1a1c1c" stroke-width="1.5" stroke-dasharray="2,2"/>
-            <!-- Front Logo plate on helmet -->
-            <polygon points="44,30 56,30 50,42" fill="#b1000f" stroke="#1a1c1c" stroke-width="1"/>
-          </svg>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       Emergency Support Banner Strip
-       ========================================================================== -->
-  <section class="emergency-strip">
-    <div class="container emergency-container">
-      <div class="emergency-text">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-          <line x1="12" y1="9" x2="12" y2="13"/>
-          <line x1="12" y1="17" x2="12.01" y2="17"/>
-        </svg>
-        Need Instant AMC or Refilling Price?
-      </div>
-      <a href="https://wa.me/919274733827?text=Hello,%20I%20want%20to%20know%20the%20pricing%20for%20refilling/AMC." class="btn btn-emergency" target="_blank">Chat On WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       Footer
-       ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <a href="index.html" class="logo-link">
-          <img src="assets/UR_Fire_Logo.svg" alt="UR Fire Safety Solution Logo" class="logo-image" style="height: 45px;">
-        </a>
-        <p class="footer-desc">Providing high-grade fire protection solutions for industrial and commercial sectors. Reliability in every spark.</p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="services.html#extinguishers">Fire Extinguishers</a></li>
-          <li><a href="services.html#hydrants">Hydrant Systems</a></li>
-          <li><a href="services.html#alarms">Alarm Systems</a></li>
-          <li><a href="services.html#refilling">Equipment Refilling</a></li>
-          <li><a href="services.html#maintenance">AMC Maintenance</a></li>
+      <div>
+        <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Compliance</h4>
+        <ul class="space-y-3 font-body-md opacity-80">
+          <li>GST: 24AAAAA0000A1Z5</li>
+          <li>ISO 9001:2015</li>
+          <li>License: FIRE/VAD/102</li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="about.html#certifications">Safety Certifications</a></li>
-          <li><a href="products.html">Product Catalog</a></li>
-          <li><a href="contact.html">Client Portal</a></li>
-          <li><a href="about.html#terms">Terms & Conditions</a></li>
+      <div>
+        <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Quick Links</h4>
+        <ul class="space-y-3 font-body-md opacity-80">
+          <li><a href="index.html" class="hover:text-primary-fixed-dim">Home</a></li>
+          <li><a href="products.html" class="hover:text-primary-fixed-dim">Products</a></li>
+          <li><a href="about.html" class="hover:text-primary-fixed-dim">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-primary-fixed-dim">Contact</a></li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h3>Contact Info</h3>
-        <ul class="footer-contact-info">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <div>9274733827</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <div>urfiresafetysolution@gmail.com</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <div>B-20 Shivam Tenament, Channi Jakatnaka, Vadodara 390024</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p class="copyright-text">&copy; 2026 UR Fire Safety Solution. Reliability in every spark.</p>
-      <div class="footer-socials">
-        <a href="https://facebook.com" class="social-link">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
-        </a>
-        <a href="tel:9274733827" class="social-link">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-        </a>
+      <div>
+        <h4 class="font-label-sm text-label-sm font-bold uppercase mb-6 text-primary-fixed-dim">Contact</h4>
+        <p class="font-body-md opacity-80 mb-2">B-20 Shivam Tenament, Channi Jakatnaka, Vadodara 390024</p>
+        <p class="font-body-md opacity-80">P: +91 9274733827</p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/919274733827?text=Hello,%20I'm%20interested%20in%20your%20fire%20safety%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.455h.008c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <!-- JS script -->
   <script src="js/main.js"></script>
 </body>
 </html>
